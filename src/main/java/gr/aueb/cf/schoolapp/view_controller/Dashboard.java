@@ -1,6 +1,8 @@
 
 package gr.aueb.cf.schoolapp.view_controller;
 
+import gr.aueb.cf.schoolapp.Main;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
