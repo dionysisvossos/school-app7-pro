@@ -29,23 +29,23 @@ public class Dashboard extends JFrame {
 	private static Connection connection;
 	
 	public Dashboard() {
-		addWindowListener(new WindowAdapter() {
-			@Override
-			public void windowOpened(WindowEvent e) {
-				String sql = "jdbc:mysql://localhost:3306/school7dbpro?serverTimeZone=UTC";
-				String username = "user7pro";
-				String password = "12345";		// Password should not appear (not be visible) in code-base.
-				// String password = System.getenv("TS_USER_PASSWORD");
-				
-				try {
-					// Class.forName("com.mysql.cj.jdbc.Driver");
-					connection = DriverManager.getConnection(sql, username, password);
-					System.out.println("Connection Success");
-				} catch (SQLException e1) {
-					e1.printStackTrace();
-				}
-			}
-		});
+//		addWindowListener(new WindowAdapter() {
+//			@Override
+//			public void windowOpened(WindowEvent e) {
+//				String sql = "jdbc:mysql://localhost:3306/school7dbpro?serverTimeZone=UTC";
+//				String username = "user7pro";
+//				String password = "12345";		// Password should not appear (not be visible) in code-base.
+//				// String password = System.getenv("TS_USER_PASSWORD");
+//
+//				try {
+//					// Class.forName("com.mysql.cj.jdbc.Driver");
+//					connection = DriverManager.getConnection(sql, username, password);
+//					System.out.println("Connection Success");
+//				} catch (SQLException e1) {
+//					e1.printStackTrace();
+//				}
+//			}
+//		});
 		setTitle("Ποιότητα στην Εκπαίδευση");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 759, 467);
