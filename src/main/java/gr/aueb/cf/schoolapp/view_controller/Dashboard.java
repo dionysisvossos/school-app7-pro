@@ -213,10 +213,7 @@ public class Dashboard extends JFrame {
 		contentPane.add(btnInsertTeacher);
 	}
 
-	public static Connection getConnection() {
-		return connection;
-	}
-	
-	
-	
+//	public static Connection getConnection() {
+//		return connection;
+//	}
 }
