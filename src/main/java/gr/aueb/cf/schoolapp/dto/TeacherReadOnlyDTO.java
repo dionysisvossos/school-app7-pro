@@ -10,9 +10,9 @@ public class TeacherReadOnlyDTO extends BaseDTO {
 
     }
 
-    public TeacherReadOnlyDTO(String firstname, String lastname, String vat, String fatherName,
+    public TeacherReadOnlyDTO(Integer id, String uuid,String firstname, String lastname, String vat, String fatherName,
                               String phoneNum, String email, String street, String streetNum,
-                              String zipCode, Integer cityId, Integer id, String uuid) {
+                              String zipCode, Integer cityId) {
         super(firstname, lastname, vat, fatherName, phoneNum, email, street, streetNum, zipCode, cityId);
         this.id = id;
         this.uuid = uuid;
