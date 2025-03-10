@@ -12,7 +12,7 @@ import java.util.List;
 public class TeacherDAOImpl implements ITeacherDAO{
     @Override
     public Teacher insert(Teacher teacher) throws TeacherDAOException {
-        String sql = "INSERT INTO teachers (firstname, lastname, vat, fathername, phone_num, email, "
+        String sql = "INSERT INTO teachers (firstname, lastname, vat, fatherName, phone_num, email, "
                 + "street, street_num, zipcode, city_id, uuid, created_at, updated_at) " +
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
@@ -24,7 +24,7 @@ public class TeacherDAOImpl implements ITeacherDAO{
             ps.setString(1, teacher.getFirstname());
             ps.setString(2, teacher.getLastname());
             ps.setString(3, teacher.getVat());
-            ps.setString(4, teacher.getFathername());
+            ps.setString(4, teacher.getFatherName());
             ps.setString(5, teacher.getPhoneNum());
             ps.setString(6, teacher.getEmail());
             ps.setString(7, teacher.getStreet());
@@ -55,7 +55,7 @@ public class TeacherDAOImpl implements ITeacherDAO{
 
     @Override
     public Teacher update(Teacher teacher) throws TeacherDAOException {
-        String sql = "UPDATE teachers SET firstname = ?, lastname = ?, vat = ?, fathername = ?, " +
+        String sql = "UPDATE teachers SET firstname = ?, lastname = ?, vat = ?, fatherName = ?, " +
                 "phone_num = ?, email = ?, street = ?, street_num = ?, zipcode = ?, city_id = ?," +
                 "updated_at = ? WHERE id = ?";
 
@@ -67,7 +67,7 @@ public class TeacherDAOImpl implements ITeacherDAO{
             ps.setString(1, teacher.getFirstname());
             ps.setString(2, teacher.getLastname());
             ps.setString(3, teacher.getVat());
-            ps.setString(4, teacher.getFathername());
+            ps.setString(4, teacher.getFatherName());
             ps.setString(5, teacher.getPhoneNum());
             ps.setString(6, teacher.getEmail());
             ps.setString(7, teacher.getStreet());
@@ -122,7 +122,7 @@ public class TeacherDAOImpl implements ITeacherDAO{
 
             if (rs.next()) {
                 teacher = new Teacher(rs.getInt("id"), rs.getString("firstname"), rs.getString("lastname"),rs.getString("vat"),
-                rs.getString("fathername"), rs.getString("phone_num"), rs.getString("email"), rs.getString("street"),
+                rs.getString("fatherName"), rs.getString("phone_num"), rs.getString("email"), rs.getString("street"),
                         rs.getString("street_num"), rs.getString("zipcode"), rs.getInt("city_id"), rs.getString("uuid"),
                 rs.getTimestamp("created_at").toLocalDateTime(), rs.getTimestamp("updated_at").toLocalDateTime());
             }
@@ -148,7 +148,7 @@ public class TeacherDAOImpl implements ITeacherDAO{
 
             while (rs.next()) {
                 teacher = new Teacher(rs.getInt("id"), rs.getString("firstname"), rs.getString("lastname"),rs.getString("vat"),
-                        rs.getString("fathername"), rs.getString("phone_num"), rs.getString("email"), rs.getString("street"),
+                        rs.getString("fatherName"), rs.getString("phone_num"), rs.getString("email"), rs.getString("street"),
                         rs.getString("street_num"), rs.getString("zipcode"), rs.getInt("city_id"), rs.getString("uuid"),
                         rs.getTimestamp("created_at").toLocalDateTime(), rs.getTimestamp("updated_at").toLocalDateTime());
                 teachers.add(teacher);
@@ -175,7 +175,7 @@ public class TeacherDAOImpl implements ITeacherDAO{
 
             if (rs.next()) {
                 teacher = new Teacher(rs.getInt("id"), rs.getString("firstname"), rs.getString("lastname"), rs.getString("vat"),
-                        rs.getString("fathername"), rs.getString("phone_num"), rs.getString("email"), rs.getString("street"),
+                        rs.getString("fatherName"), rs.getString("phone_num"), rs.getString("email"), rs.getString("street"),
                         rs.getString("street_num"), rs.getString("zipcode"), rs.getInt("city_id"), rs.getString("uuid"),
                         rs.getTimestamp("created_at").toLocalDateTime(), rs.getTimestamp("updated_at").toLocalDateTime());
             }
@@ -202,7 +202,7 @@ public class TeacherDAOImpl implements ITeacherDAO{
 
             while (rs.next()) {
                 teacher = new Teacher(rs.getInt("id"), rs.getString("firstname"), rs.getString("lastname"), rs.getString("vat"),
-                        rs.getString("fathername"), rs.getString("phone_num"), rs.getString("email"), rs.getString("street"),
+                        rs.getString("fatherName"), rs.getString("phone_num"), rs.getString("email"), rs.getString("street"),
                         rs.getString("street_num"), rs.getString("zipcode"), rs.getInt("city_id"), rs.getString("uuid"),
                         rs.getTimestamp("created_at").toLocalDateTime(), rs.getTimestamp("updated_at").toLocalDateTime());
                 teachers.add(teacher);
@@ -229,7 +229,7 @@ public class TeacherDAOImpl implements ITeacherDAO{
 
             if (rs.next()) {
                 teacher = new Teacher(rs.getInt("id"), rs.getString("firstname"), rs.getString("lastname"), rs.getString("vat"),
-                        rs.getString("fathername"), rs.getString("phone_num"), rs.getString("email"), rs.getString("street"),
+                        rs.getString("fatherName"), rs.getString("phone_num"), rs.getString("email"), rs.getString("street"),
                         rs.getString("street_num"), rs.getString("zipcode"), rs.getInt("city_id"), rs.getString("uuid"),
                         rs.getTimestamp("created_at").toLocalDateTime(), rs.getTimestamp("updated_at").toLocalDateTime());
             }

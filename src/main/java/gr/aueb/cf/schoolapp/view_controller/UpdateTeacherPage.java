@@ -36,7 +36,7 @@ public class UpdateTeacherPage extends JFrame {
 	private JTextField firstnameText;
 	private JTextField lastnameText;
 	private JTextField vatText;
-	private JTextField fathernameText;
+	private JTextField fatherNameText;
 	private JTextField phoneNumberText;
 	private JTextField emailText;
 	private JTextField streetText;
@@ -178,10 +178,10 @@ public class UpdateTeacherPage extends JFrame {
 		lblFathername.setBounds(421, 202, 95, 29);
 		contentPane.add(lblFathername);
 		
-		fathernameText = new JTextField();
-		fathernameText.setColumns(10);
-		fathernameText.setBounds(512, 198, 263, 37);
-		contentPane.add(fathernameText);
+		fatherNameText = new JTextField();
+		fatherNameText.setColumns(10);
+		fatherNameText.setBounds(512, 198, 263, 37);
+		contentPane.add(fatherNameText);
 		
 		JLabel lblPhoneNumber = new JLabel("Τηλέφωνο*");
 		lblPhoneNumber.setFont(new Font("Tahoma", Font.BOLD, 12));
@@ -261,7 +261,7 @@ public class UpdateTeacherPage extends JFrame {
 				String firstname = firstnameText.getText().trim();
 				String lastname = lastnameText.getText().trim();
 				String vat = vatText.getText();
-				String fathername = fathernameText.getText();
+				String fatherName = fatherNameText.getText();
 				String phoneNumber = phoneNumberText.getText();
 				String email = emailText.getText();
 				String street = streetText.getText();
@@ -301,7 +301,7 @@ public class UpdateTeacherPage extends JFrame {
 //    					ps.setString(1, firstname);
 //    					ps.setString(2, lastname);
 //    					ps.setString(3, vat);
-//    					ps.setString(4, fathername);
+//    					ps.setString(4, fatherName);
 //    					ps.setString(5, phoneNumber);
 //    					ps.setString(6, email);
 //    					ps.setString(7, street);
@@ -384,7 +384,7 @@ public class UpdateTeacherPage extends JFrame {
 //				firstnameText.setText(rs.getString("firstname"));
 //				lastnameText.setText(rs.getString("lastname"));
 //				vatText.setText(rs.getString("vat"));
-//				fathernameText.setText(rs.getString("fathername"));
+//				fatherNameText.setText(rs.getString("fatherName"));
 //				phoneNumberText.setText(rs.getString("phone_num"));
 //				emailText.setText(rs.getString("email"));
 //				streetText.setText(rs.getString("street"));

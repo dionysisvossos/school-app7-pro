@@ -41,7 +41,7 @@ public class InsertTeacherPage extends JFrame {
 	private JTextField firstnameText;
 	private JTextField lastnameText;
 	private JTextField vatText;
-	private JTextField fathernameText;
+	private JTextField fatherNameText;
 	private JTextField phoneNumberText;
 	private JTextField emailText;
 	private JTextField streetText;
@@ -62,7 +62,7 @@ public class InsertTeacherPage extends JFrame {
 				firstnameText.setText("");
 				lastnameText.setText("");
 				vatText.setText("");
-				fathernameText.setText("");
+				fatherNameText.setText("");
 				phoneNumberText.setText("");
 				emailText.setText("");
 				streetText.setText("");
@@ -188,10 +188,10 @@ public class InsertTeacherPage extends JFrame {
 		lblFathername.setBounds(421, 202, 95, 29);
 		contentPane.add(lblFathername);
 		
-		fathernameText = new JTextField();
-		fathernameText.setColumns(10);
-		fathernameText.setBounds(512, 198, 263, 37);
-		contentPane.add(fathernameText);
+		fatherNameText = new JTextField();
+		fatherNameText.setColumns(10);
+		fatherNameText.setBounds(512, 198, 263, 37);
+		contentPane.add(fatherNameText);
 		
 		JLabel lblPhoneNumber = new JLabel("Τηλέφωνο*");
 		lblPhoneNumber.setFont(new Font("Tahoma", Font.BOLD, 12));
@@ -270,7 +270,7 @@ public class InsertTeacherPage extends JFrame {
 				String firstname = firstnameText.getText().trim();
 				String lastname = lastnameText.getText().trim();
 				String vat = vatText.getText().trim();
-				String fathername = fathernameText.getText().trim();
+				String fatherName = fatherNameText.getText().trim();
 				String phoneNumber = phoneNumberText.getText().trim();
 				String email = emailText.getText().trim();
 				String street = streetText.getText().trim();
@@ -294,7 +294,7 @@ public class InsertTeacherPage extends JFrame {
 //
 //				// Insert
 //
-//				String sql = "INSERT INTO teachers (firstname, lastname, vat, fathername, phone_num, "
+//				String sql = "INSERT INTO teachers (firstname, lastname, vat, fatherName, phone_num, "
 //            			+ "email, street, street_num, zipcode, city_id, uuid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 //
 ////            	Connection conn = Dashboard.getConnection();
@@ -305,7 +305,7 @@ public class InsertTeacherPage extends JFrame {
 //					ps.setString(1, firstname);
 //					ps.setString(2, lastname);
 //					ps.setString(3, vat);
-//					ps.setString(4, fathername);
+//					ps.setString(4, fatherName);
 //					ps.setString(5, phoneNumber);
 //					ps.setString(6, email);
 //					ps.setString(7, street);

@@ -189,15 +189,15 @@ public class Dashboard extends JFrame {
 		btnViewTeachers.setBounds(202, 183, 94, 31);
 		contentPane.add(btnViewTeachers);
 		
-		JLabel lblInsertToRegisrty = new JLabel("Εισαγωγή Εκπαιδευτή στο Μητρώο Εκπαιδευτών");
-		lblInsertToRegisrty.setFont(new Font("Tahoma", Font.BOLD, 12));
-		lblInsertToRegisrty.setBounds(202, 225, 359, 38);
-		contentPane.add(lblInsertToRegisrty);
+		JLabel lblInsertToRegistry = new JLabel("Εισαγωγή Εκπαιδευτή στο Μητρώο Εκπαιδευτών");
+		lblInsertToRegistry.setFont(new Font("Tahoma", Font.BOLD, 12));
+		lblInsertToRegistry.setBounds(202, 225, 359, 38);
+		contentPane.add(lblInsertToRegistry);
 		
-		JLabel lblInsertToCertRegisrty = new JLabel("Εισαγωγή Εκπαιδευτή στο Μητρώο του Coding Factory");
-		lblInsertToCertRegisrty.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblInsertToCertRegisrty.setBounds(202, 244, 533, 38);
-		contentPane.add(lblInsertToCertRegisrty);
+		JLabel lblInsertToCertRegistry = new JLabel("Εισαγωγή Εκπαιδευτή στο Μητρώο του Coding Factory");
+		lblInsertToCertRegistry.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		lblInsertToCertRegistry.setBounds(202, 244, 533, 38);
+		contentPane.add(lblInsertToCertRegistry);
 		
 		JButton btnInsertTeacher = new JButton("Συνέχεια");
 		btnInsertTeacher.addActionListener(new ActionListener() {

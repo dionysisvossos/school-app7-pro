@@ -263,11 +263,11 @@ public class ViewTeachersPage extends JFrame {
 //	    	e.printStackTrace();
 //	        JOptionPane.showMessageDialog(null, "Select error", "Error", JOptionPane.ERROR_MESSAGE);
 //	    }
-//	}
+	}
 //
 //	//private void doDelete(int id) {
-//	private void doDelete(String uuid) {
-////		String sql = "DELETE FROM teachers WHERE id = ?";
+	private void doDelete(String uuid) {
+//		String sql = "DELETE FROM teachers WHERE id = ?";
 //		String sql = "DELETE FROM teachers WHERE uuid = ?";
 //		Connection conn = Dashboard.getConnection();
 //
@@ -282,7 +282,7 @@ public class ViewTeachersPage extends JFrame {
 //					JOptionPane.YES_NO_OPTION);
 //			if (answer == JOptionPane.YES_OPTION) {
 //				int rowsAffected = ps.executeUpdate();
-//				JOptionPane.showMessageDialog(null, rowsAffected + " γρααμμή/ες διαγράφηκαν", "Διαγραφή",
+//				JOptionPane.showMessageDialog(null, rowsAffected + " γραμμή/ες διαγράφηκαν", "Διαγραφή",
 //						JOptionPane.INFORMATION_MESSAGE);
 //			} else {
 //				return;

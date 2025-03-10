@@ -241,7 +241,7 @@ public class TeacherView extends JFrame {
 //				firstnameText.setText(rs.getString("firstname"));
 //				lastnameText.setText(rs.getString("lastname"));
 //				vatText.setText(rs.getString("vat"));
-//				fathernameText.setText(rs.getString("fathername"));
+//				fatherNameText.setText(rs.getString("fatherName"));
 //				phoneNumText.setText(rs.getString("phone_num"));
 //				emailText.setText(rs.getString("email"));
 //				streetText.setText(rs.getString("street"));
