@@ -12,18 +12,17 @@ import java.util.List;
 public interface ITeacherService {
 
     TeacherReadOnlyDTO insertTeacher(TeacherInsertDTO dto)
-        throws TeacherDAOException, TeacherAlreadyExistsException;
+            throws TeacherDAOException, TeacherAlreadyExistsException;
 
     TeacherReadOnlyDTO updateTeacher(Integer id, TeacherUpdateDTO dto)
-        throws TeacherDAOException, TeacherAlreadyExistsException, TeacherNotFoundException;
+            throws TeacherDAOException, TeacherAlreadyExistsException, TeacherNotFoundException;
 
     void deleteTeacher(Integer id) throws TeacherDAOException, TeacherNotFoundException;
 
-    TeacherReadOnlyDTO getTeacherById(Integer id) throws TeacherDAOException,TeacherNotFoundException;
+    TeacherReadOnlyDTO getTeacherById(Integer id) throws TeacherDAOException, TeacherNotFoundException;
 
     List<TeacherReadOnlyDTO> getAllTeachers() throws TeacherDAOException;
 
     List<TeacherReadOnlyDTO> getTeachersByLastName(String lastname) throws TeacherDAOException;
 
-    TeacherReadOnlyDTO getTeacherByUuid(String uuid) throws TeacherDAOException, TeacherNotFoundException;
 }
