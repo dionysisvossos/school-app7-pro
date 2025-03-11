@@ -189,7 +189,7 @@ public class TeacherDAOImpl implements ITeacherDAO{
     }
 
     @Override
-    public Teacher getByLastname(String lastname) throws TeacherDAOException {
+    public List<Teacher> getByLastname(String lastname) throws TeacherDAOException {
         String sql = "SELECT * FROM teachers WHERE lastname LIKE ?";
         Teacher teacher = null;
         List<Teacher> teachers = new ArrayList<>();
@@ -208,7 +208,7 @@ public class TeacherDAOImpl implements ITeacherDAO{
                         rs.getTimestamp("created_at").toLocalDateTime(), rs.getTimestamp("updated_at").toLocalDateTime());
                 teachers.add(teacher);
             }
-            return teacher;
+            return teachers;
         } catch (SQLException e) {
             e.printStackTrace();
             // logging
