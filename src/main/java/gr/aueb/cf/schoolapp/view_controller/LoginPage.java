@@ -1,6 +1,7 @@
 package gr.aueb.cf.schoolapp.view_controller;
 
 import gr.aueb.cf.schoolapp.Main;
+import gr.aueb.cf.schoolapp.authentication.AuthenticationManager;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -76,15 +77,14 @@ public class LoginPage extends JFrame {
 		JButton btnConnect = new JButton("Σύνδεση");
 		btnConnect.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if ((username.getText().matches("[aA]dmin")) && (Arrays.equals(password.getPassword(), "12345".toCharArray()))) {
-				Main.getLoginPage().setEnabled(false);
-				Main.getDashboard().setVisible(true);
-				Main.getLoginPage().setVisible(false);
+//				if ((username.getText().matches("[aA]dmin")) && (Arrays.equals(password.getPassword(), "12345".toCharArray()))) {
+				if (AuthenticationManager.authenticate(username.getText(), password.getPassword())) {
+					Main.getLoginPage().setVisible(false);
+					Main.getDashboard().setVisible(true);
 				} else {
 					JOptionPane.showMessageDialog(null,  "Λάθος username ή password", "Αδυναμία σύνδεσης", JOptionPane.ERROR_MESSAGE);
 					username.setText("");
 					password.setText("");
-					return;
 				}
 			}
 		});
